@@ -58,13 +58,14 @@ img {
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-logo {
-  height: 54px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -152,6 +153,29 @@ strong {
 }
 
 /* ============================================================
+   TOUR TICKET ECKE
+   ============================================================ */
+.tour-ticket-link {
+  position: fixed;
+  bottom: 84px;
+  right: 28px;
+  z-index: 800;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.tour-ticket-link:hover {
+  transform: scale(1.05);
+}
+
+.tour-ticket-img {
+  width: 130px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+}
+
+/* ============================================================
    HERO
    ============================================================ */
 #hero {
@@ -159,36 +183,47 @@ strong {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 24px 60px;
+  padding: 110px 48px 60px;
 }
 
 .hero-inner {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.hero-logo {
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto 40px;
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-video-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-video-col .section-label {
+  margin-bottom: 0;
 }
 
 #hero h1 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--red);
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 24px;
-  text-transform: none;
 }
 
 .hero-text {
   font-size: 17px;
   color: var(--grey);
-  max-width: 640px;
-  margin: 0 auto 36px;
+  margin-bottom: 36px;
   line-height: 1.75;
 }
 
@@ -261,8 +296,7 @@ strong {
 
 .carousel-slide img {
   width: 100%;
-  height: 240px;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -411,7 +445,7 @@ strong {
 }
 
 /* ============================================================
-   VIDEO
+   VIDEO (standalone – nicht mehr in Hero)
    ============================================================ */
 #video {
   background: var(--black);
@@ -700,6 +734,20 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-text-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero {
+    padding: 110px 24px 60px;
+  }
+
   .events-grid {
     grid-template-columns: 1fr;
     gap: 2px;
@@ -724,15 +772,11 @@ footer {
   }
 
   #hero h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   h2 {
     font-size: 24px;
-  }
-
-  .hero-logo {
-    max-width: 320px;
   }
 }
 
