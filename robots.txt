@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zauberer.derhypnotiseur.com/sitemap.xml
