@@ -18,10 +18,11 @@
   <meta property="og:url" content="https://www.derhypnotiseur.com/">
   <meta property="og:image" content="https://derhypnotiseur.com/wp-content/uploads/2026/05/DE_Pressefoto_Querformat_Motiv-03-Credit-_-Michelle-Glorius-1024x576.png">
 
-  <!-- Fonts -->
+  <!-- Fonts: nicht-blockierend laden -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap"></noscript>
 
   <link rel="stylesheet" href="style.css">
 
@@ -65,18 +66,19 @@
 
   <!-- Tour Ticket Ecke (fest verankert) -->
   <a href="http://comedyhypnoseshow.de" target="_blank" rel="noopener" class="tour-ticket-link" aria-label="Tour Tickets kaufen">
-    <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-3-1024x576.png" alt="Tour Tickets jetzt kaufen" class="tour-ticket-img">
+    <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-3-1024x576.png" alt="Tour Tickets jetzt kaufen" class="tour-ticket-img" width="120" height="68">
   </a>
 
   <!-- NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="/" class="nav-logo-link" aria-label="DER HYPNOTISEUR – Startseite">
-        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante Logo" class="nav-logo">
+        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante Logo" class="nav-logo" width="300" height="169">
       </a>
     </div>
   </nav>
 
+  <main>
   <!-- ============================================================
        HERO: Text links, Video rechts
   ============================================================ -->
@@ -217,11 +219,11 @@
     <div class="carousel" role="region" aria-label="Bild Karussell">
       <div class="carousel-track-wrapper">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/1-300x224.png" alt="Timo Dante Hypnoseshow Live auf der Bühne – Impression 1" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/2-300x224.png" alt="Comedy Hypnoseshow mit Timo Dante – Publikum auf der Bühne" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/3-300x224.png" alt="DER HYPNOTISEUR Timo Dante – Firmenshow Live" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/4-300x224.png" alt="Hypnoseshow Publikumsreaktion – Gäste als Stars" loading="lazy"></div>
-          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/5-300x224.png" alt="Timo Dante Bühnenhypnose – Comedy Entertainment" loading="lazy"></div>
+          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/1-300x224.png" alt="Timo Dante Hypnoseshow Live auf der Bühne – Impression 1" loading="lazy" width="300" height="224"></div>
+          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/2-300x224.png" alt="Comedy Hypnoseshow mit Timo Dante – Publikum auf der Bühne" loading="lazy" width="300" height="224"></div>
+          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/3-300x224.png" alt="DER HYPNOTISEUR Timo Dante – Firmenshow Live" loading="lazy" width="300" height="224"></div>
+          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/4-300x224.png" alt="Hypnoseshow Publikumsreaktion – Gäste als Stars" loading="lazy" width="300" height="224"></div>
+          <div class="carousel-slide"><img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/5-300x224.png" alt="Timo Dante Bühnenhypnose – Comedy Entertainment" loading="lazy" width="300" height="224"></div>
         </div>
       </div>
       <button class="carousel-btn prev" aria-label="Vorheriges Bild">&#10094;</button>
@@ -285,6 +287,7 @@
           src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DE_Pressefoto_Querformat_Motiv-03-Credit-_-Michelle-Glorius-1024x576.png"
           alt="Timo Dante DER HYPNOTISEUR – Bühnenhypnose Live Show"
           loading="lazy"
+          width="1024" height="576"
         >
       </div>
     </div>
@@ -373,6 +376,7 @@
           src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DE_Pressefoto_Hochkant_Motiv-02-Credit-_-Michelle-Glorius-576x1024.png"
           alt="Timo Dante – DER HYPNOTISEUR – Professioneller Bühnenhypnotiseur"
           loading="lazy"
+          width="576" height="1024"
         >
       </div>
       <div class="about-text">
@@ -467,13 +471,15 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ============================================================
        FOOTER
   ============================================================ -->
   <footer>
     <div class="footer-inner">
       <a href="/" class="footer-logo-link">
-        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante" class="footer-logo">
+        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante" class="footer-logo" width="300" height="169">
       </a>
       <ul class="social-links">
         <li><a href="https://www.facebook.com/share/1GYNEXUfMU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a></li>
