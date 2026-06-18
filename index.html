@@ -20,7 +20,7 @@
 
   <!-- Preload kritische Ressourcen -->
   <link rel="preload" as="image" href="img/logo-nav.webp" type="image/webp" fetchpriority="high">
-  <link rel="preload" as="image" href="img/yt-thumbnail.webp" type="image/webp">
+  <link rel="preload" as="image" href="img/yt-thumbnail-720.webp" type="image/webp">
 
   <!-- Fonts: nicht-blockierend laden -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,46 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap"></noscript>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Kritisches CSS inline → kein Render-Blocking für above-fold -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--red:#e30613;--red-dk:#b5000f;--black:#000000;--dark:#0a0a0a;--dark2:#111111;--white:#ffffff;--grey:#c0c0c0;--grey2:#9ca3af;--font:'Roboto',sans-serif;--max:1200px;--nav-h:90px}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    main{display:block}
+    .tour-ticket-link{position:fixed;bottom:84px;right:24px;z-index:800;display:block}
+    .tour-ticket-img{width:120px;height:auto}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(0,0,0,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06);height:var(--nav-h);display:flex;align-items:center}
+    .nav-inner{width:100%;max-width:var(--max);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:center}
+    .nav-logo{height:64px;width:auto}
+    #hero{background:var(--black);min-height:100vh;display:flex;align-items:center;padding:calc(var(--nav-h) + 40px) 32px 60px}
+    .hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+    .hero-text-col{display:flex;flex-direction:column;align-items:flex-start}
+    #hero h1{font-size:44px;font-weight:900;line-height:1.1;color:var(--white);margin-bottom:24px}
+    .red{color:var(--red)}
+    h2{font-size:34px;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:20px}
+    .hero-text{font-size:17px;color:var(--grey);line-height:1.75;margin-bottom:36px;max-width:480px}
+    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+    .hero-video-col{display:flex;flex-direction:column;gap:10px}
+    .section-label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+    .hero-video-col .section-label{margin-bottom:4px}
+    .btn{display:inline-block;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px 38px;border:2px solid transparent;cursor:pointer;transition:all .2s;text-decoration:none;white-space:nowrap}
+    .btn-primary{background:var(--red);color:var(--white);border-color:var(--red)}
+    .btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.35)}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.08)}
+    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    .yt-facade{cursor:pointer}
+    .yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+    .yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:none;border:none;cursor:pointer;padding:0;filter:drop-shadow(0 2px 12px rgba(0,0,0,.7));z-index:2}
+    @media(max-width:900px){:root{--nav-h:76px}.hero-inner{grid-template-columns:1fr;gap:40px}.hero-text-col{align-items:center;text-align:center}#hero h1{font-size:32px}.hero-text{max-width:100%}#hero{padding:calc(var(--nav-h) + 32px) 24px 50px}}
+    @media(max-width:600px){#hero h1{font-size:26px}.hero-ctas{flex-direction:column;width:100%}.hero-ctas .btn{text-align:center}}
+  </style>
+  <!-- Vollständiges CSS nicht-blockierend laden -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 
   <!-- Structured Data: PerformingArtist + EntertainmentBusiness -->
   <script type="application/ld+json">
@@ -107,8 +146,8 @@
         <p class="section-label">DER HYPNOTISEUR LIVE!</p>
         <div class="video-wrapper yt-facade" data-videoid="yMNJNl7Pdgk">
           <picture>
-            <source srcset="img/yt-thumbnail.webp" type="image/webp">
-            <img src="img/yt-thumbnail.jpg" alt="DER HYPNOTISEUR Trailer ansehen – zum Abspielen klicken" width="1280" height="720" loading="eager" fetchpriority="high">
+            <source srcset="img/yt-thumbnail-720.webp" type="image/webp">
+            <img src="img/yt-thumbnail-720.jpg" alt="DER HYPNOTISEUR Trailer ansehen – zum Abspielen klicken" width="720" height="405" loading="eager" fetchpriority="high">
           </picture>
           <button class="yt-play-btn" aria-label="Video abspielen">
             <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7c-.8-2.9-3.2-5.2-6.1-5.9C55.1 0 34 0 34 0S12.9 0 7.6 1.8C4.7 2.6 2.3 4.9 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3.2 5.2 6.1 5.9C12.9 48 34 48 34 48s21.1 0 26.4-1.8c2.9-.8 5.2-3.1 6.1-5.9C68 35 68 24 68 24s0-11-1.5-16.3z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>
@@ -379,12 +418,10 @@
   <section id="about" aria-labelledby="about-heading">
     <div class="about-inner">
       <div class="about-image">
-        <img
-          src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DE_Pressefoto_Hochkant_Motiv-02-Credit-_-Michelle-Glorius-576x1024.png"
-          alt="Timo Dante – DER HYPNOTISEUR – Professioneller Bühnenhypnotiseur"
-          loading="lazy"
-          width="576" height="1024"
-        >
+        <picture>
+          <source srcset="img/portrait.webp" type="image/webp">
+          <img src="img/portrait.png" alt="Timo Dante – DER HYPNOTISEUR – Professioneller Bühnenhypnotiseur" loading="lazy" width="576" height="1024">
+        </picture>
       </div>
       <div class="about-text">
         <p class="section-label">Der Mensch hinter der Show</p>
@@ -486,7 +523,10 @@
   <footer>
     <div class="footer-inner">
       <a href="/" class="footer-logo-link">
-        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante" class="footer-logo" width="300" height="169">
+        <picture>
+          <source srcset="img/logo-nav.webp" type="image/webp">
+          <img src="img/logo-nav.png" alt="DER HYPNOTISEUR Timo Dante" class="footer-logo" width="300" height="169" loading="lazy">
+        </picture>
       </a>
       <ul class="social-links">
         <li><a href="https://www.facebook.com/share/1GYNEXUfMU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a></li>

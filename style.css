@@ -640,7 +640,7 @@ strong { color: var(--white); }
 .about-text .btn { margin-top: 16px; }
 
 .about-subtitle {
-  font-size: 11px !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -661,7 +661,7 @@ strong { color: var(--white); }
   margin: 32px 0;
 }
 .cta-contact p {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -701,7 +701,7 @@ strong { color: var(--white); }
 .form-group { display: flex; flex-direction: column; gap: 7px; }
 
 .form-group label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--grey2);
   letter-spacing: 0.1em;
