@@ -18,6 +18,12 @@
   <meta property="og:url" content="https://www.derhypnotiseur.com/">
   <meta property="og:image" content="https://derhypnotiseur.com/wp-content/uploads/2026/05/DE_Pressefoto_Querformat_Motiv-03-Credit-_-Michelle-Glorius-1024x576.png">
 
+  <!-- Preload kritische Ressourcen -->
+  <link rel="preload" as="image" href="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" fetchpriority="high">
+  <link rel="preload" as="image" href="https://img.youtube.com/vi/yMNJNl7Pdgk/maxresdefault.jpg">
+  <link rel="dns-prefetch" href="https://img.youtube.com">
+  <link rel="dns-prefetch" href="https://derhypnotiseur.com">
+
   <!-- Fonts: nicht-blockierend laden -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +79,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="/" class="nav-logo-link" aria-label="DER HYPNOTISEUR – Startseite">
-        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante Logo" class="nav-logo" width="300" height="169">
+        <img src="https://derhypnotiseur.com/wp-content/uploads/2026/05/DER-HYPNOTISEUR-NEW-LOGO-2026-300x169.png" alt="DER HYPNOTISEUR Timo Dante Logo" class="nav-logo" width="300" height="169" fetchpriority="high">
       </a>
     </div>
   </nav>
@@ -95,15 +101,17 @@
       </div>
       <div class="hero-video-col">
         <p class="section-label">DER HYPNOTISEUR LIVE!</p>
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/yMNJNl7Pdgk"
-            title="DER HYPNOTISEUR I NEW TRAILER 2024/25 – Timo Dante Comedy Hypnoseshow"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <div class="video-wrapper yt-facade" data-videoid="yMNJNl7Pdgk">
+          <img
+            src="https://img.youtube.com/vi/yMNJNl7Pdgk/maxresdefault.jpg"
+            alt="DER HYPNOTISEUR Trailer ansehen – zum Abspielen klicken"
+            width="1280" height="720"
+            loading="eager"
+            fetchpriority="high"
+          >
+          <button class="yt-play-btn" aria-label="Video abspielen">
+            <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7c-.8-2.9-3.2-5.2-6.1-5.9C55.1 0 34 0 34 0S12.9 0 7.6 1.8C4.7 2.6 2.3 4.9 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3.2 5.2 6.1 5.9C12.9 48 34 48 34 48s21.1 0 26.4-1.8c2.9-.8 5.2-3.1 6.1-5.9C68 35 68 24 68 24s0-11-1.5-16.3z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>
+          </button>
         </div>
       </div>
     </div>
