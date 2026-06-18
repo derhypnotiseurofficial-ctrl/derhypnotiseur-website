@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Timo Dante – DER HYPNOTISEUR | Bühnenhypnose für Firmenfeier & Hochzeit</title>
+  <meta name="description" content="Professioneller Bühnenhypnotiseur Timo Dante – Comedy-Hypnoseshow für Firmenfeiern, Hochzeiten & Galas in ganz Deutschland. Deine Gäste werden zum Star. Jetzt anfragen!">
+  <meta name="keywords" content="Hypnotiseur buchen, Bühnenhypnose, Firmenfeier Entertainer, Hochzeit Showkünstler, Comedy Hypnose, Timo Dante, DER HYPNOTISEUR, Showkünstler NRW, Hypnoseshow buchen">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.derhypnotiseur.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Timo Dante – DER HYPNOTISEUR | Bühnenhypnose für Events">
+  <meta property="og:description" content="Comedy-Hypnoseshow für Firmenfeiern, Hochzeiten & Galas. Deine Gäste werden zum Star. Jetzt Verfügbarkeit prüfen.">
+  <meta property="og:url" content="https://www.derhypnotiseur.com/">
+  <meta property="og:image" content="https://www.derhypnotiseur.cimg/hero-timo.webp">
+
+  <link rel="preload" as="image" href="img/hero-timo.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="img/logo-nav.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--red:#e30613;--red-dk:#b5000f;--black:#000;--dark:#080808;--dark2:#0f0f0f;--white:#fff;--grey:#aaa;--grey2:#666;--font-display:'Barlow Condensed',sans-serif;--font:'Inter',sans-serif;--max:1240px;--nav-h:88px}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:none}
+    @media(pointer:coarse){body{cursor:auto}}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    main{display:block}
+    #loader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:32px;transition:opacity .6s ease .2s,visibility .6s ease .2s}
+    #loader.done{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-logo{width:180px;height:auto;animation:pulse 1.2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+    .loader-bar{width:200px;height:2px;background:rgba(255,255,255,.1);overflow:hidden}
+    .loader-progress{height:100%;background:var(--red);width:0;transition:width .8s ease}
+    #cursor{width:8px;height:8px;background:var(--red);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s}
+    #cursor-follower{width:32px;height:32px;border:1px solid rgba(227,6,19,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9997;transform:translate(-50%,-50%)}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:900;height:var(--nav-h);display:flex;align-items:center;transition:background .3s,box-shadow .3s}
+    #navbar.scrolled{background:rgba(0,0,0,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .nav-inner{width:100%;max-width:var(--max);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .nav-logo{height:56px;width:auto}
+    .nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+    .nav-links a{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .btn-nav{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;background:var(--red);color:#fff;border:1px solid var(--red);transition:all .2s;white-space:nowrap}
+    .btn-nav:hover{background:var(--red-dk)}
+    .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+    .nav-burger span{display:block;width:24px;height:1.5px;background:#fff;transition:all .3s}
+    #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.7) 100%)}
+    .hero-overlay::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,#000,transparent)}
+    .hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:calc(var(--nav-h) + 60px) 32px 80px;width:100%}
+    .hero-eyebrow{font-family:var(--font);font-size:12px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:24px}
+    .hero-title{font-family:var(--font-display);font-size:clamp(72px,10vw,140px);font-weight:900;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:32px}
+    .hero-title .line1{display:block;color:#fff}
+    .hero-title .line2{display:block;color:var(--red);text-shadow:0 0 80px rgba(227,6,19,.4)}
+    .hero-sub{font-size:clamp(16px,1.8vw,20px);color:rgba(255,255,255,.75);max-width:520px;line-height:1.6;margin-bottom:48px}
+    .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 40px;border:1px solid transparent;cursor:none;transition:all .2s;text-decoration:none;white-space:nowrap;position:relative;overflow:hidden}
+    @media(pointer:coarse){.btn{cursor:pointer}}
+    .btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.05);opacity:0;transition:opacity .2s}
+    .btn:hover::before{opacity:1}
+    .btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+    .btn-primary:hover{background:var(--red-dk);border-color:var(--red-dk);transform:translateY(-2px);box-shadow:0 12px 40px rgba(227,6,19,.4)}
+    .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+    .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+    .hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+    .scroll-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+    .scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:scrollPulse 1.8s ease-in-out infinite}
+    @keyframes scrollPulse{0%,100%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+    @media(max-width:900px){:root{--nav-h:72px}.nav-links{display:none}.nav-burger{display:flex}.hero-ctas{flex-direction:column}.btn{width:100%;text-align:center}}
+    @media(max-width:600px){.nav-inner{padding:0 20px}.hero-content{padding-left:20px;padding-right:20px}}
+  </style>
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.derhypnotiseur.com/#person",
+        "name": "Timo Dante",
+        "alternateName": "DER HYPNOTISEUR",
+        "jobTitle": "Bühnenhypnotiseur & Entertainer",
+        "description": "Professioneller Comedy-Bühnenhypnotiseur für Firmenfeiern, Hochzeiten, Galas und Theater-Shows in ganz Deutschland.",
+        "url": "https://www.derhypnotiseur.com",
+        "email": "info@derhypnotiseur.com",
+        "image": "https://www.derhypnotiseur.cimg/hero-timo.webp",
+        "sameAs": [
+          "https://www.instagram.com/derhypnotiseur_official",
+          "https://www.youtube.com/@derhypnotiseur",
+          "https://www.facebook.com/share/1GYNEXUfMU/"
+        ],
+        "address": {"@type": "PostalAddress", "addressLocality": "Oberhausen", "addressRegion": "NRW", "addressCountry": "DE"},
+        "areaServed": "DE"
+      },
+      {
+        "@type": "EntertainmentBusiness",
+        "@id": "https://www.derhypnotiseur.com/#business",
+        "name": "DER HYPNOTISEUR – Timo Dante",
+        "url": "https://www.derhypnotiseur.com",
+        "email": "info@derhypnotiseur.com",
+        "priceRange": "€€€",
+        "description": "Comedy-Bühnenhypnose für Events aller Art in Deutschland.",
+        "address": {"@type": "PostalAddress", "addressLocality": "Oberhausen", "addressRegion": "NRW", "addressCountry": "DE"},
+        "founder": {"@id": "https://www.derhypnotiseur.com/#person"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Was ist der Unterschied zu einem Zauberer?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Zauberer führt Tricks vor – das Publikum schaut zu. Bei DER HYPNOTISEUR werden freiwillige Gäste selbst Teil der Show. Das schafft echtes Gemeinschaftserlebnis."}},
+          {"@type": "Question", "name": "Müssen Gäste mitmachen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Die Teilnahme ist immer 100% freiwillig. Gäste genießen die Show entspannt von ihren Plätzen."}},
+          {"@type": "Question", "name": "Für welche Eventgrößen eignet sich die Show?", "acceptedAnswer": {"@type": "Answer", "text": "Ab ca. 30 Gäste aufwärts. Timo Dante hat bereits Shows mit mehreren hundert Gästen gespielt."}},
+          {"@type": "Question", "name": "Wie lange dauert die Show?", "acceptedAnswer": {"@type": "Answer", "text": "Je nach Format zwischen 60 und 120 Minuten, abgestimmt auf den Abendablauf."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <picture>
+    <source srcset="img/logo-nav.webp" type="image/webp">
+    <img src="img/logo-nav.png" alt="" class="loader-logo" width="180" height="101" fetchpriority="high">
+  </picture>
+  <div class="loader-bar"><div class="loader-progress" id="loader-progress"></div></div>
+</div>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-follower" aria-hidden="true"></div>
+
+<nav id="navbar" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo-link" aria-label="DER HYPNOTISEUR – Startseite">
+      <picture>
+        <source srcset="img/logo-nav.webp" type="image/webp">
+        <img src="img/logo-nav.png" alt="DER HYPNOTISEUR Timo Dante" class="nav-logo" width="160" height="90" fetchpriority="high">
+      </picture>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#shows">Shows</a></li>
+      <li><a href="#about">Über Timo</a></li>
+      <li><a href="#media">Showreel</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#kontakt" class="btn-nav">Jetzt buchen</a>
+    <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation">
+  <button class="mobile-menu-close" id="mobile-close" aria-label="Menü schließen">✕</button>
+  <ul>
+    <li><a href="#shows">Shows</a></li>
+    <li><a href="#about">Über Timo</a></li>
+    <li><a href="#media">Showreel</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#kontakt" class="btn btn-primary">Jetzt buchen</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero" aria-label="Willkommen bei DER HYPNOTISEUR">
+  <div class="hero-bg">
+    <picture>
+      <source srcset="img/hero-timo.webp" type="image/webp">
+      <img src="img/hero-timo.jpg" alt="" aria-hidden="true" width="1920" height="1080" fetchpriority="high">
+    </picture>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Comedy · Bühnenhypnose · Entertainment</p>
+    <h1 class="hero-title">
+      <span class="line1">DER</span>
+      <span class="line2">HYPNOTISEUR</span>
+    </h1>
+    <p class="hero-sub">Die Show, über die alle noch<br>Wochen danach reden.</p>
+    <div class="hero-ctas">
+      <a href="#kontakt" class="btn btn-primary magnetic">Show anfragen</a>
+      <a href="#media" class="btn btn-ghost magnetic">Showreel ansehen</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-label">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<section id="stats" aria-label="Erfahrung in Zahlen">
+  <div class="stats-inner">
+    <div class="stat reveal-up">
+      <span class="stat-num" data-count="20">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">Jahre Erfahrung</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat reveal-up" style="--delay:.1s">
+      <span class="stat-num" data-count="500">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">Shows & Events</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat reveal-up" style="--delay:.2s">
+      <span class="stat-num" data-count="10000">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">begeisterte Gäste</span>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat reveal-up" style="--delay:.3s">
+      <span class="stat-num">100</span><span class="stat-suf">%</span>
+      <span class="stat-label">freiwillige Teilnahme</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ DAS ERLEBNIS ═══════════════════════ -->
+<section id="erlebnis" aria-labelledby="erlebnis-h">
+  <div class="erlebnis-inner">
+    <div class="erlebnis-text">
+      <p class="label reveal-up">Das Erlebnis</p>
+      <h2 id="erlebnis-h" class="reveal-up">Deine Gäste werden<br>zum Star der Show.</h2>
+      <p class="reveal-up">Nicht du sitzt und schaust zu — deine Gäste <em>erleben</em>. Freiwillige aus dem Publikum stehen auf der Bühne, machen Dinge, die sie selbst nicht für möglich gehalten hätten, und das gesamte Publikum lacht gemeinsam mit ihnen.</p>
+      <p class="reveal-up">Das ist kein Trick. Das ist echte Bühnenhypnose — ein Gemeinschaftserlebnis, das Firmenfeiern, Hochzeiten und Galas in Geschichten verwandelt, die noch Jahre danach erzählt werden.</p>
+      <div class="erlebnis-bullets reveal-up">
+        <div class="bullet"><span class="bullet-icon">✓</span> Einmalig — jede Show ist anders</div>
+        <div class="bullet"><span class="bullet-icon">✓</span> Freiwillige Teilnahme — niemand wird gezwungen</div>
+        <div class="bullet"><span class="bullet-icon">✓</span> Gemeinschaftserlebnis — alle lachen zusammen</div>
+      </div>
+      <a href="#kontakt" class="btn btn-primary magnetic reveal-up" style="--delay:.1s">Termin anfragen</a>
+    </div>
+    <div class="erlebnis-gallery">
+      <div class="gallery-grid">
+        <div class="g-item g-large reveal-img">
+          <picture><source srcset="img/gallery-1.webp" type="image/webp"><img src="img/gallery-1.png" alt="Timo Dante Hypnoseshow – Live Impression" loading="lazy" width="300" height="224"></picture>
+        </div>
+        <div class="g-item g-small reveal-img" style="--delay:.1s">
+          <picture><source srcset="img/gallery-2.webp" type="image/webp"><img src="img/gallery-2.png" alt="Comedy Hypnoseshow – Publikum auf der Bühne" loading="lazy" width="300" height="224"></picture>
+        </div>
+        <div class="g-item g-small reveal-img" style="--delay:.2s">
+          <picture><source srcset="img/gallery-3.webp" type="image/webp"><img src="img/gallery-3.png" alt="Timo Dante Firmenshow Live" loading="lazy" width="300" height="224"></picture>
+        </div>
+        <div class="g-item g-large reveal-img" style="--delay:.15s">
+          <picture><source srcset="img/gallery-4.webp" type="image/webp"><img src="img/gallery-4.png" alt="Hypnoseshow Publikumsreaktion" loading="lazy" width="300" height="224"></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SHOW FORMATS ═══════════════════════ -->
+<section id="shows" aria-labelledby="shows-h">
+  <div class="section-wrap">
+    <p class="label text-center reveal-up">Für jeden Anlass</p>
+    <h2 id="shows-h" class="text-center reveal-up">Wähle dein Format</h2>
+    <div class="shows-grid">
+
+      <article class="show-card tilt-card reveal-up">
+        <div class="show-card-bg"></div>
+        <div class="show-num">01</div>
+        <div class="show-icon-wrap">🏢</div>
+        <h3>Firmenfeier</h3>
+        <p>Das Highlight deiner Weihnachtsfeier, deines Kick-offs oder Mitarbeiterevents. Professionell, souverän, unvergesslich.</p>
+        <ul class="show-list">
+          <li>Ab 30 Gäste</li>
+          <li>60–120 Min Show</li>
+          <li>Vollständig moderiert</li>
+        </ul>
+        <a href="#kontakt" class="show-link">Anfragen <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="show-card tilt-card reveal-up" style="--delay:.1s">
+        <div class="show-card-bg"></div>
+        <div class="show-num">02</div>
+        <div class="show-icon-wrap">💍</div>
+        <h3>Hochzeit</h3>
+        <p>Statt dem klassischen Zauberer: eine Show, bei der Braut, Bräutigam und alle Gäste selbst unvergessliche Momente erleben.</p>
+        <ul class="show-list">
+          <li>Abendunterhaltung</li>
+          <li>Angepasst an den Abend</li>
+          <li>100% freiwillig</li>
+        </ul>
+        <a href="#kontakt" class="show-link">Anfragen <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="show-card tilt-card reveal-up" style="--delay:.2s">
+        <div class="show-card-bg"></div>
+        <div class="show-num">03</div>
+        <div class="show-icon-wrap">✨</div>
+        <h3>Gala & Theater</h3>
+        <p>Dramatische Bühne, elegante Inszenierung. Der perfekte Programmpunkt für Preisverleihungen und Galaabende.</p>
+        <ul class="show-list">
+          <li>Bis 1.000+ Gäste</li>
+          <li>Bühnenadaptierung</li>
+          <li>Full Production möglich</li>
+        </ul>
+        <a href="#kontakt" class="show-link">Anfragen <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="show-card tilt-card reveal-up" style="--delay:.3s">
+        <div class="show-card-bg"></div>
+        <div class="show-num">04</div>
+        <div class="show-icon-wrap">🎂</div>
+        <h3>Private Feier</h3>
+        <p>Geburtstage, Jubiläen, besondere Abende — wenn du etwas wirklich Unvergessliches möchtest statt dem üblichen Programm.</p>
+        <ul class="show-list">
+          <li>Ab 30 Personen</li>
+          <li>Individuelle Planung</li>
+          <li>Flexible Formate</li>
+        </ul>
+        <a href="#kontakt" class="show-link">Anfragen <span aria-hidden="true">→</span></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SHOWREEL ═══════════════════════ -->
+<section id="media" aria-labelledby="media-h">
+  <div class="section-wrap text-center">
+    <p class="label reveal-up">Live erleben</p>
+    <h2 id="media-h" class="reveal-up">Sieh selbst, was passiert</h2>
+    <p class="subtext reveal-up">Worte beschreiben es nicht. Schau es an.</p>
+    <div class="video-frame reveal-up">
+      <div class="video-wrapper yt-facade" data-videoid="yMNJNl7Pdgk">
+        <picture>
+          <source srcset="img/yt-thumbnail-720.webp" type="image/webp">
+          <img src="img/yt-thumbnail-720.jpg" alt="DER HYPNOTISEUR Showreel – zum Abspielen klicken" loading="lazy" width="720" height="405">
+        </picture>
+        <button class="yt-play-btn" aria-label="Showreel abspielen">
+          <svg viewBox="0 0 68 48" width="80" height="56" aria-hidden="true">
+            <path d="M66.5 7.7c-.8-2.9-3.2-5.2-6.1-5.9C55.1 0 34 0 34 0S12.9 0 7.6 1.8C4.7 2.6 2.3 4.9 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3.2 5.2 6.1 5.9C12.9 48 34 48 34 48s21.1 0 26.4-1.8c2.9-.8 5.2-3.1 6.1-5.9C68 35 68 24 68 24s0-11-1.5-16.3z" fill="rgba(227,6,19,.92)"/>
+            <path d="M45 24 27 14v20" fill="white"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section id="testimonials" aria-labelledby="testi-h">
+  <div class="section-wrap text-center">
+    <p class="label reveal-up">Was Kunden sagen</p>
+    <h2 id="testi-h" class="reveal-up">Echte Reaktionen.<br>Echte Momente.</h2>
+    <div class="testi-carousel reveal-up" role="region" aria-label="Kundenmeinungen">
+      <div class="testi-track">
+        <div class="testi-slide">
+          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>
+            <p>„Unsere Weihnachtsfeier wird noch in Jahren besprochen. Alle reden davon, was auf der Bühne passiert ist. Timo Dante ist ein absolutes Ausnahmetalent."</p>
+            <footer><cite>Sarah K. — HR Managerin, Düsseldorf</cite></footer>
+          </blockquote>
+        </div>
+        <div class="testi-slide">
+          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>
+            <p>„Wir hatten erst einen Zauberer geplant. Auf Empfehlung wechselten wir zu Timo Dante. Es war die beste Entscheidung für unsere Hochzeit — absolut unvergesslich."</p>
+            <footer><cite>Thomas & Julia M. — Brautpaar, Oberhausen</cite></footer>
+          </blockquote>
+        </div>
+        <div class="testi-slide">
+          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>
+            <p>„Das Publikum hat Standing Ovations gegeben. Ich habe noch nie so eine spontane, echte Reaktion bei einem Gala-Abend erlebt. Klare Buchungsempfehlung."</p>
+            <footer><cite>Michael S. — Veranstaltungsleiter, Essen</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="testi-dots" role="tablist" aria-label="Testimonial Navigation"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ÜBER TIMO ═══════════════════════ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="about-inner">
+    <div class="about-img-wrap reveal-img">
+      <picture>
+        <source srcset="img/portrait.webp" type="image/webp">
+        <img src="img/portrait.png" alt="Timo Dante – DER HYPNOTISEUR" loading="lazy" width="576" height="1024">
+      </picture>
+      <div class="about-badge"><span>20+</span><span>Jahre</span></div>
+    </div>
+    <div class="about-text">
+      <p class="label reveal-up">Der Mensch hinter der Show</p>
+      <h2 id="about-h" class="reveal-up">Wer ist<br>Timo Dante?</h2>
+      <p class="reveal-up">Timo Dante ist nicht nur ein Name — er ist ein Versprechen. Als professioneller Bühnenhypnotiseur vereint er psychologisches Know-how mit Comedy-Entertainment auf höchstem Niveau.</p>
+      <p class="reveal-up">In Oberhausen verwurzelt, tritt er auf großen Bühnen in ganz Deutschland auf — von mittelständischen Firmenfeiern über Hochzeiten bis zu Theater-Shows mit mehreren hundert Gästen.</p>
+      <div class="about-creds reveal-up">
+        <div class="cred"><strong>20+</strong><span>Jahre Bühnenerfahrung</span></div>
+        <div class="cred"><strong>500+</strong><span>Events deutschlandweit</span></div>
+        <div class="cred"><strong>∞</strong><span>Unvergessliche Momente</span></div>
+      </div>
+      <a href="#kontakt" class="btn btn-primary magnetic reveal-up">Mit Timo sprechen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ABLAUF ═══════════════════════ -->
+<section id="ablauf" aria-labelledby="ablauf-h">
+  <div class="section-wrap text-center">
+    <p class="label reveal-up">Einfach & unkompliziert</p>
+    <h2 id="ablauf-h" class="reveal-up">In 3 Schritten zur Show</h2>
+    <div class="steps">
+      <div class="step reveal-up">
+        <div class="step-num">01</div>
+        <h3>Anfragen</h3>
+        <p>Kurze Nachricht mit Datum, Ort und Gästezahl. Antwort innerhalb von 24 Stunden, persönlich von Timo Dante.</p>
+      </div>
+      <div class="step-line reveal-up"></div>
+      <div class="step reveal-up" style="--delay:.1s">
+        <div class="step-num">02</div>
+        <h3>Planen</h3>
+        <p>Gemeinsam wird das perfekte Show-Format ausgewählt und alle Details besprochen — Bühne, Timing, Ablauf.</p>
+      </div>
+      <div class="step-line reveal-up"></div>
+      <div class="step reveal-up" style="--delay:.2s">
+        <div class="step-num">03</div>
+        <h3>Unvergesslich feiern</h3>
+        <p>Der Abend, über den alle noch Monate reden werden. Garantiert.</p>
+      </div>
+    </div>
+    <a href="#kontakt" class="btn btn-primary magnetic reveal-up" style="--delay:.3s">Jetzt anfragen</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="section-wrap">
+    <p class="label text-center reveal-up">Häufige Fragen</p>
+    <h2 id="faq-h" class="text-center reveal-up">Alles, was du wissen möchtest</h2>
+    <div class="accordion" role="list">
+
+      <div class="acc-item reveal-up" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="acc-trigger" aria-expanded="false" itemprop="name">
+          <span>Was ist der Unterschied zu einem Zauberer?</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ein Zauberer führt Tricks vor — das Publikum sitzt und schaut zu. Bei DER HYPNOTISEUR werden freiwillige Gäste selbst Teil der Show. Das schafft echtes Gemeinschaftserlebnis: alle lachen zusammen über Momente, die ihre eigenen Mitgäste erleben. Das ist einmalig und unvergesslich.</p>
+        </div>
+      </div>
+
+      <div class="acc-item reveal-up" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="acc-trigger" aria-expanded="false" itemprop="name">
+          <span>Müssen Gäste mitmachen?</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Nein. Die Teilnahme ist immer 100% freiwillig. Gäste genießen die Show entspannt von ihren Plätzen. Nur wer wirklich möchte, kommt auf die Bühne. Niemand wird bloßgestellt oder gezwungen.</p>
+        </div>
+      </div>
+
+      <div class="acc-item reveal-up" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="acc-trigger" aria-expanded="false" itemprop="name">
+          <span>Für welche Eventgrößen eignet sich die Show?</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Ab ca. 30 Gäste aufwärts. Nach oben gibt es keine Grenze — Timo Dante hat bereits Shows mit mehreren hundert Gästen gespielt. Die Show skaliert perfekt mit der Publikumsgröße.</p>
+        </div>
+      </div>
+
+      <div class="acc-item reveal-up" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="acc-trigger" aria-expanded="false" itemprop="name">
+          <span>Wie lange dauert die Show?</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Je nach Format zwischen 60 und 120 Minuten. Die Showlänge wird gemeinsam abgestimmt und an den Abendablauf angepasst.</p>
+        </div>
+      </div>
+
+      <div class="acc-item reveal-up" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="acc-trigger" aria-expanded="false" itemprop="name">
+          <span>Ist Bühnenhypnose gefährlich?</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="acc-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Nein. Bühnenhypnose ist keine Gedankenkontrolle. Niemand macht etwas, das seinen Werten widerspricht. Timo Dante arbeitet seit über zwei Jahrzehnten professionell und seriös. Die Show ist zu 100% auf Spaß, Sicherheit und positive Erlebnisse ausgerichtet.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA BANNER ═══════════════════════ -->
+<section id="cta-banner" aria-label="Jetzt buchen">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="section-wrap text-center">
+    <h2 class="reveal-up">Mach dein Event<br><span class="text-red">unvergesslich.</span></h2>
+    <p class="subtext reveal-up">Tausende Gäste haben es bereits erlebt.<br>Deine sind als nächstes dran.</p>
+    <a href="#kontakt" class="btn btn-primary btn-xl magnetic reveal-up">Jetzt Show anfragen</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════ KONTAKT ═══════════════════════ -->
+<section id="kontakt" aria-labelledby="kontakt-h">
+  <div class="kontakt-inner">
+    <div class="kontakt-info">
+      <p class="label reveal-up">Lass uns sprechen</p>
+      <h2 id="kontakt-h" class="reveal-up">Show anfragen</h2>
+      <p class="reveal-up">Kurze Anfrage genügt. Timo Dante meldet sich <strong>persönlich</strong> innerhalb von 24 Stunden.</p>
+      <div class="direct-links reveal-up">
+        <a href="mailto:info@derhypnotiseur.com" class="direct-link">
+          <span class="d-icon">✉</span> info@derhypnotiseur.com
+        </a>
+        <a href="https://www.instagram.com/derhypnotiseur_official" target="_blank" rel="noopener noreferrer" class="direct-link">
+          <span class="d-icon">📷</span> @derhypnotiseur_official
+        </a>
+      </div>
+      <div class="trust-badges reveal-up">
+        <div class="trust-badge">✓ Kostenlose Anfrage</div>
+        <div class="trust-badge">✓ Antwort in 24h</div>
+        <div class="trust-badge">✓ Kein Spam</div>
+      </div>
+    </div>
+    <div class="kontakt-form reveal-up">
+      <div class="form-msg success" id="form-success" style="display:none" role="alert">
+        ✓ Anfrage gesendet! Timo meldet sich persönlich bei dir.
+      </div>
+      <div class="form-msg error" id="form-error" style="display:none" role="alert">
+        Fehler beim Senden. Bitte schreibe direkt an info@derhypnotiseur.com
+      </div>
+      <form action="contact.php" method="POST" class="c-form" novalidate>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Ihr Name" required autocomplete="name">
+          </div>
+          <div class="f-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="event">Art des Events</label>
+            <select id="event" name="veranstaltung">
+              <option value="Firmenfeier">Firmenfeier / Firmenevent</option>
+              <option value="Hochzeit">Hochzeit</option>
+              <option value="Gala">Gala / Preisverleihung</option>
+              <option value="Theater">Theater-Show</option>
+              <option value="Geburtstag">Geburtstag / Privatfeier</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="datum">Wunschdatum</label>
+            <input type="text" id="datum" name="datum" placeholder="z.B. 15.11.2026" autocomplete="off">
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="msg">Deine Nachricht</label>
+          <textarea id="msg" name="nachricht" rows="4" placeholder="Location, Gästezahl, besondere Wünsche..."></textarea>
+        </div>
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-primary btn-submit">Anfrage senden – kostenlos & unverbindlich</button>
+        <p class="form-note">Keine Weitergabe deiner Daten. Kein Spam. Nur Timo.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <a href="/" class="footer-logo-link" aria-label="DER HYPNOTISEUR – Startseite">
+      <picture>
+        <source srcset="img/logo-nav.webp" type="image/webp">
+        <img src="img/logo-nav.png" alt="DER HYPNOTISEUR" class="footer-logo" width="140" height="79" loading="lazy">
+      </picture>
+    </a>
+    <p class="footer-tagline">Die Show, über die alle noch Wochen reden.</p>
+    <ul class="footer-social" role="list">
+      <li><a href="https://www.instagram.com/derhypnotiseur_official" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@derhypnotiseur" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="https://www.facebook.com/share/1GYNEXUfMU/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+    </ul>
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </nav>
+    <p class="footer-copy">© 2026 Timo Dante – DER HYPNOTISEUR. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Zum Seitenanfang">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

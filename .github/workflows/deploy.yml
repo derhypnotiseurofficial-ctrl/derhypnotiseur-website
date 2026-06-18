@@ -5,7 +5,8 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
+  deploy-zauberer:
+    name: Deploy zauberer.derhypnotiseur.com
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,3 +22,21 @@ jobs:
             **/node_modules/**
             .claude/**
             BRIEFING-VORLAGE.md
+            main-site/**
+
+  deploy-hauptseite:
+    name: Deploy derhypnotiseur.com
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: w01b0db8.kasserver.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORT }}
+          local-dir: ./main-site/
+          server-dir: /www/htdocs/w01b0db8/derhypnotiseur.com/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
