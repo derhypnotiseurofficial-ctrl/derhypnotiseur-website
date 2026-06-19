@@ -23,13 +23,14 @@ function clean(string $value): string {
 
 $name           = clean($_POST['name'] ?? '');
 $email          = clean($_POST['email'] ?? '');
-$telefon        = clean($_POST['telefon'] ?? '');
+$whatsapp       = clean($_POST['whatsapp'] ?? '');
 $veranstaltung  = clean($_POST['veranstaltung'] ?? '');
+$gaeste         = clean($_POST['gaeste'] ?? '');
 $datum          = clean($_POST['datum'] ?? '');
 $nachricht      = clean($_POST['nachricht'] ?? '');
 
 // Pflichtfelder prüfen
-if (empty($name) || empty($email) || empty($telefon)) {
+if (empty($name) || empty($email)) {
     header('Location: index.html?error=1#formular');
     exit;
 }
@@ -47,8 +48,9 @@ $body = "Neue Booking-Anfrage über derhypnotiseur.com\n";
 $body .= str_repeat('=', 50) . "\n\n";
 $body .= "Name:           {$name}\n";
 $body .= "E-Mail:         {$email}\n";
-$body .= "Telefon:        {$telefon}\n";
+$body .= "WhatsApp:       {$whatsapp}\n";
 $body .= "Veranstaltung:  {$veranstaltung}\n";
+$body .= "Gästezahl:      {$gaeste}\n";
 $body .= "Datum:          {$datum}\n\n";
 $body .= "Nachricht:\n{$nachricht}\n\n";
 $body .= str_repeat('-', 50) . "\n";

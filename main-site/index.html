@@ -564,6 +564,16 @@
         </div>
         <div class="f-row">
           <div class="f-group">
+            <label for="whatsapp">WhatsApp-Nummer</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+49 ..." autocomplete="tel">
+          </div>
+          <div class="f-group">
+            <label for="gaeste">Ungefähre Gästezahl</label>
+            <input type="text" id="gaeste" name="gaeste" placeholder="z.B. 80 Personen" autocomplete="off">
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
             <label for="event">Art des Events</label>
             <select id="event" name="veranstaltung">
               <option value="Firmenfeier">Firmenfeier / Firmenevent</option>
@@ -581,7 +591,7 @@
         </div>
         <div class="f-group">
           <label for="msg">Deine Nachricht</label>
-          <textarea id="msg" name="nachricht" rows="4" placeholder="Location, Gästezahl, besondere Wünsche..."></textarea>
+          <textarea id="msg" name="nachricht" rows="4" placeholder="Location, besondere Wünsche..."></textarea>
         </div>
         <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit" class="btn btn-primary btn-submit">Anfrage senden – kostenlos & unverbindlich</button>

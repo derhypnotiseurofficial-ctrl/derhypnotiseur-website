@@ -20,6 +20,8 @@ function clean(string $value): string {
 
 $name          = clean($_POST['name'] ?? '');
 $email         = clean($_POST['email'] ?? '');
+$whatsapp      = clean($_POST['whatsapp'] ?? '');
+$gaeste        = clean($_POST['gaeste'] ?? '');
 $veranstaltung = clean($_POST['veranstaltung'] ?? '');
 $datum         = clean($_POST['datum'] ?? '');
 $nachricht     = clean($_POST['nachricht'] ?? '');
@@ -40,7 +42,9 @@ $body  = "Neue Booking-Anfrage über derhypnotiseur.com\n";
 $body .= str_repeat('=', 50) . "\n\n";
 $body .= "Name:           {$name}\n";
 $body .= "E-Mail:         {$email}\n";
+$body .= "WhatsApp:       {$whatsapp}\n";
 $body .= "Veranstaltung:  {$veranstaltung}\n";
+$body .= "Gästezahl:      {$gaeste}\n";
 $body .= "Datum:          {$datum}\n\n";
 $body .= "Nachricht:\n{$nachricht}\n\n";
 $body .= str_repeat('-', 50) . "\n";
