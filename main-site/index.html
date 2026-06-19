@@ -14,7 +14,7 @@
   <meta property="og:title" content="Timo Dante – DER HYPNOTISEUR | Bühnenhypnose für Events">
   <meta property="og:description" content="Comedy-Hypnoseshow für Firmenfeiern, Hochzeiten & Galas. Deine Gäste werden zum Star. Jetzt Verfügbarkeit prüfen.">
   <meta property="og:url" content="https://www.derhypnotiseur.com/">
-  <meta property="og:image" content="https://www.derhypnotiseur.cimg/hero-timo.webp">
+  <meta property="og:image" content="https://www.derhypnotiseur.com/img/hero-timo.webp">
 
   <link rel="preload" as="image" href="img/hero-timo.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="img/logo-nav.webp" type="image/webp">
@@ -75,6 +75,13 @@
     .scroll-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)}
     .scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:scrollPulse 1.8s ease-in-out infinite}
     @keyframes scrollPulse{0%,100%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+    @keyframes heroIn{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+    .hero-eyebrow{animation:heroIn .7s ease .3s both}
+    .hero-title .line1{animation:heroIn .8s ease .5s both}
+    .hero-title .line2{animation:heroIn .8s ease .65s both}
+    .hero-sub{animation:heroIn .7s ease .85s both}
+    .hero-ctas{animation:heroIn .6s ease 1.05s both}
+    .hero-scroll{animation:heroIn .5s ease 1.6s both}
     @media(max-width:900px){:root{--nav-h:72px}.nav-links{display:none}.nav-burger{display:flex}.hero-ctas{flex-direction:column}.btn{width:100%;text-align:center}}
     @media(max-width:600px){.nav-inner{padding:0 20px}.hero-content{padding-left:20px;padding-right:20px}}
   </style>

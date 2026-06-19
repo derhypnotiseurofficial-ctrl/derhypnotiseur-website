@@ -15,12 +15,12 @@
     if (progress) progress.style.width = p + '%';
   }, 80);
 
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     clearInterval(tick);
     if (progress) progress.style.width = '100%';
     setTimeout(() => {
       if (loader) loader.classList.add('done');
-    }, 400);
+    }, 200);
   });
 
   /* ── Custom Cursor ── */
@@ -296,15 +296,7 @@
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
     gsap.registerPlugin(ScrollTrigger);
 
-    /* Hero title stagger */
-    gsap.from('.hero-eyebrow', { opacity: 0, y: 20, duration: .8, delay: .6 });
-    gsap.from('.hero-title .line1', { opacity: 0, y: 60, duration: .9, delay: .8 });
-    gsap.from('.hero-title .line2', { opacity: 0, y: 60, duration: .9, delay: 1.0 });
-    gsap.from('.hero-sub', { opacity: 0, y: 30, duration: .8, delay: 1.2 });
-    gsap.from('.hero-ctas', { opacity: 0, y: 20, duration: .7, delay: 1.45 });
-    gsap.from('.hero-scroll', { opacity: 0, duration: .6, delay: 2.0 });
-
-    /* Stats counter triggered by GSAP (in addition to IntersectionObserver) */
+    /* Stats counter triggered by GSAP */
     ScrollTrigger.create({
       trigger: '#stats',
       start: 'top 80%',

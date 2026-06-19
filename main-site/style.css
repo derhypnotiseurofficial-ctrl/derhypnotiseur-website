@@ -109,6 +109,9 @@ p { margin-bottom: 16px; color: rgba(255,255,255,.75); }
   line-height: 1;
   color: var(--white);
   letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  min-width: 3ch;
+  display: inline-block;
 }
 .stat-suf {
   font-family: var(--font-display);
