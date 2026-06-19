@@ -5,23 +5,6 @@
 (function () {
   'use strict';
 
-  /* ── Page Loader ── */
-  const loader = document.getElementById('loader');
-  const progress = document.getElementById('loader-progress');
-  let p = 0;
-  const tick = setInterval(() => {
-    p += Math.random() * 18;
-    if (p >= 100) { p = 100; clearInterval(tick); }
-    if (progress) progress.style.width = p + '%';
-  }, 80);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    clearInterval(tick);
-    if (progress) progress.style.width = '100%';
-    setTimeout(() => {
-      if (loader) loader.classList.add('done');
-    }, 200);
-  });
 
   /* ── Custom Cursor ── */
   const cur = document.getElementById('cursor');
