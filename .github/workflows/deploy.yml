@@ -32,8 +32,8 @@ jobs:
       - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: w01b0db8.kasserver.com
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORT }}
+          username: ${{ secrets.FTP_USERNAME_MAIN }}
+          password: ${{ secrets.FTP_PASSWORT_MAIN }}
           local-dir: ./main-site/
           server-dir: /derhypnotiseur.com/
           exclude: |
