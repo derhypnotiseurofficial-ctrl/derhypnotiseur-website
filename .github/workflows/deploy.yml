@@ -32,10 +32,10 @@ jobs:
       - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: w01b0db8.kasserver.com
-          username: ${{ secrets.FTP_USERNAME_MAIN }}
-          password: ${{ secrets.FTP_PASSWORT_MAIN }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORT }}
           local-dir: ./main-site/
-          server-dir: /
+          server-dir: /derhypnotiseur.com/
           exclude: |
             **/.git*
             **/.git*/**
