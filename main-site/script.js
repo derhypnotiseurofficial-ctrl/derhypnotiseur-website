@@ -291,23 +291,4 @@
     }, { passive: true });
   }
 
-  /* ── GSAP animations (loaded async, gracefully degraded) ── */
-  function initGSAP() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    /* Stats counter triggered by GSAP */
-    ScrollTrigger.create({
-      trigger: '#stats',
-      start: 'top 80%',
-      onEnter: () => {
-        document.querySelectorAll('[data-count]').forEach(animateCounter);
-      },
-      once: true,
-    });
-  }
-
-  if (document.readyState === 'complete') initGSAP();
-  else window.addEventListener('load', initGSAP);
-
 })();
