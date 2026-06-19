@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://www.derhypnotiseur.com/img/hero-timo.webp">
 
   <link rel="preload" as="image" href="img/hero-timo.webp" type="image/webp" fetchpriority="high">
-  <link rel="preload" as="image" href="img/logo-nav.webp" type="image/webp" fetchpriority="low">
+  <link rel="preload" as="image" href="img/logo-nav.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;500;600&display=optional" onload="this.onload=null;this.rel='stylesheet'">
@@ -34,8 +34,8 @@
     main{display:block}
     #loader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:32px;transition:opacity .5s ease,visibility .5s ease}
     #loader.done{opacity:0;visibility:hidden;pointer-events:none}
-    .loader-logo{width:180px;height:auto;animation:pulse 1.2s ease-in-out infinite}
-    @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+    .loader-logo{width:180px;height:auto;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
     .loader-bar{width:200px;height:2px;background:rgba(255,255,255,.1);overflow:hidden}
     .loader-progress{height:100%;background:var(--red);width:0;transition:width .6s ease}
     #cursor{width:8px;height:8px;background:var(--red);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s}
