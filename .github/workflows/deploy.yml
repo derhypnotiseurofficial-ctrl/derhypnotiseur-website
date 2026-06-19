@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME_MAIN }}
           password: ${{ secrets.FTP_PASSWORT_MAIN }}
           local-dir: ./main-site/
-          server-dir: /derhypnotiseur.com/
+          server-dir: /
           exclude: |
             **/.git*
             **/.git*/**
