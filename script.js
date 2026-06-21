@@ -1,4 +1,43 @@
 // ============================================================
+// Cookie Consent + Google Analytics
+// ============================================================
+(function () {
+  var GA_ID = 'G-XP99ET6V8B';
+  var COOKIE_KEY = 'cookie_consent';
+
+  function loadGA() {
+    if (window._gaLoaded) return;
+    window._gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
+  }
+
+  var consent = localStorage.getItem(COOKIE_KEY);
+  if (consent === 'accepted') { loadGA(); }
+
+  var banner = document.getElementById('cookie-banner');
+  if (banner && consent === null) {
+    banner.hidden = false;
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      localStorage.setItem(COOKIE_KEY, 'accepted');
+      banner.hidden = true;
+      loadGA();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function () {
+      localStorage.setItem(COOKIE_KEY, 'declined');
+      banner.hidden = true;
+    });
+  }
+})();
+
+// ============================================================
 // Carousel
 // ============================================================
 (function () {

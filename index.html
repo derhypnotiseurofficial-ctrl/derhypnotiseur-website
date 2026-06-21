@@ -2,9 +2,6 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP99ET6V8B"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XP99ET6V8B');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
@@ -67,6 +64,14 @@
     .yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:none;border:none;cursor:pointer;padding:0;filter:drop-shadow(0 2px 12px rgba(0,0,0,.7));z-index:2}
     @media(max-width:900px){:root{--nav-h:76px}.hero-inner{grid-template-columns:1fr;gap:40px}.hero-text-col{align-items:center;text-align:center}#hero h1{font-size:32px}.hero-text{max-width:100%}#hero{padding:calc(var(--nav-h) + 32px) 24px 50px}}
     @media(max-width:600px){#hero h1{font-size:26px}.hero-ctas{flex-direction:column;width:100%}.hero-ctas .btn{text-align:center}}
+  #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9000;background:#111;border-top:1px solid rgba(255,255,255,.1);padding:16px 24px}
+  .cookie-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .cookie-inner p{color:#aaa;font-size:13px;line-height:1.5;flex:1;min-width:200px}
+  .cookie-inner a{color:#e30613}
+  .cookie-btns{display:flex;gap:10px;flex-shrink:0}
+  #cookie-accept{background:#e30613;color:#fff;border:none;padding:9px 20px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.05em;text-transform:uppercase}
+  #cookie-decline{background:transparent;color:#aaa;border:1px solid rgba(255,255,255,.2);padding:9px 20px;font-size:13px;cursor:pointer}
+  #cookie-decline:hover{border-color:#fff;color:#fff}
   </style>
   <!-- Vollständiges CSS nicht-blockierend laden -->
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -548,5 +553,16 @@
   <button id="back-to-top" aria-label="Nach oben scrollen" title="Nach oben">&#8679;</button>
 
   <script src="script.js"></script>
+
+<div id="cookie-banner" hidden role="dialog" aria-label="Cookie-Einstellungen">
+  <div class="cookie-inner">
+    <p>Wir nutzen <strong>Google Analytics</strong> um zu verstehen, wie Besucher unsere Website nutzen. Deine IP-Adresse wird anonymisiert. Mehr dazu in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="cookie-btns">
+      <button id="cookie-accept">Akzeptieren</button>
+      <button id="cookie-decline">Ablehnen</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
