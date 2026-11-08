@@ -71,12 +71,12 @@ if ($ausbildung) {
     $body .= "Gesendet: " . date('d.m.Y H:i') . "\n";
 }
 
-$headers  = "From: noreply@derhypnotiseur.com\r\n";
+$headers  = "From: DER HYPNOTISEUR <info@derhypnotiseur.com>\r\n";
 $headers .= "Reply-To: {$email}\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-$sent = mail($to, $subject, $body, $headers);
+$sent = mail($to, $subject, $body, $headers, '-f info@derhypnotiseur.com');
 
 http_response_code($sent ? 200 : 500);
 exit;
